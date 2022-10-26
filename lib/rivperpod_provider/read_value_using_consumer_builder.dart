@@ -13,7 +13,7 @@ class ConsumerBuilder extends StatelessWidget {
       ),
       body: Center(child: Consumer(builder: (context, ref, child) {
         final name=ref.watch(nameProvider);
-        return Text("$name");
+        return Text(name);
       }),),);
 
   }

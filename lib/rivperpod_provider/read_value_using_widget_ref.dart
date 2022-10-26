@@ -12,7 +12,10 @@ class UsingWidgetRe extends ConsumerWidget {
     //ref.watch is used to get the value from crated provider
 
     return Scaffold(
-
+      appBar: AppBar(
+        title: const Text("Riverpod Example"),
+      ),
+      body: Center(child: Text(name),),
     );
   }
 }
