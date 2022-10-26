@@ -10,6 +10,9 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 /// Riverpod provider is used when the state of the object doesn't change
 
 
+final nameProvider=Provider<String>(((ref){
+  return "Hello Rifat";
+}));
 
 void main() {
   //Provider Scope actually stores all the state of the provider which will create in our App
@@ -26,35 +29,26 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:  MyHomePageState(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
 
-  final String title;
 
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
+class MyHomePageState extends ConsumerWidget {
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context,WidgetRef ref) {
 
+    final name=ref.watch(nameProvider);
+
+    //ref.watch is used to get the value from crated provider
+    
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title: const Text("Riverpod Example"),
       ),
       body: Center(
         child: Column(
@@ -64,17 +58,12 @@ class _MyHomePageState extends State<MyHomePage> {
               'You have pushed the button this many times:',
             ),
             Text(
-              '$_counter',
+              name,
               style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
