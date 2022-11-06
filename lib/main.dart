@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_demo/other_kind_of_provider/state_provider.dart';
+import 'package:riverpod_demo/providers_classifications/Provider/date_time_provider.dart';
+import 'package:riverpod_demo/providers_classifications/StateProvider/state_provider_example.dart';
 
 //Todo-> Riverpod Provider Syntax and Use
 //final nameProvider=Provider<String>((ref){return "Hello There";})
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  const CounterApp(),
+      home: StateProviderExample(),
     );
   }
 }
