@@ -29,6 +29,8 @@ class CounterApp extends ConsumerWidget {
         padding: const EdgeInsets.all(20.0),
         child: Column(
           children: [
+
+
             Text(
               "$counter",
               style: const TextStyle(fontSize: 20),
@@ -37,7 +39,7 @@ class CounterApp extends ConsumerWidget {
                 onPressed: () {
                   ref.read(stateProvider.notifier).state++;
                 },
-                child: Text("Click"))
+                child: const Text("Click"))
           ],
         ),
       ),
