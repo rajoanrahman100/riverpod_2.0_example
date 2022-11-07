@@ -39,6 +39,7 @@ dependencies:
   flutter_riverpod:
   flutter_hooks:
   intl:
+  http:
 
 dev_dependencies:
   flutter_test:

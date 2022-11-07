@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:riverpod_demo/other_kind_of_provider/state_provider.dart';
+import 'package:riverpod_demo/providers_classifications/FutureProvider/example_one.dart';
 import 'package:riverpod_demo/providers_classifications/Provider/date_time_provider.dart';
 import 'package:riverpod_demo/providers_classifications/StateNotifierProvider/example_two.dart';
 import 'package:riverpod_demo/providers_classifications/StateProvider/dropdown_example.dart';
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyNotifierExample(),
+      home: FutureProviderExample(),
     );
   }
 }
