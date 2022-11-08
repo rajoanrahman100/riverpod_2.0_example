@@ -4,7 +4,7 @@ import 'package:riverpod_demo/other_kind_of_provider/state_provider.dart';
 import 'package:riverpod_demo/providers_classifications/FutureProvider/example_one.dart';
 import 'package:riverpod_demo/providers_classifications/Provider/date_time_provider.dart';
 import 'package:riverpod_demo/providers_classifications/StateNotifierProvider/example_two.dart';
-import 'package:riverpod_demo/providers_classifications/StateProvider/dropdown_example.dart';
+import 'package:riverpod_demo/providers_classifications/StateProvider/checkbox_state_example.dart';
 import 'package:riverpod_demo/providers_classifications/StateProvider/state_provider_example.dart';
 
 import 'providers_classifications/StateNotifierProvider/counter_stateNotifierProvider.dart';

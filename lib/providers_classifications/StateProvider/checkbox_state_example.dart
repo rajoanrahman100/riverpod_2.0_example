@@ -21,7 +21,7 @@ class ExampleTwo extends ConsumerWidget{
                 Checkbox(value: checkBoxRef, onChanged: (val){
                   ref.read(checkBoxProvider.notifier).state=val!;
                 }),
-                Text("${checkBoxRef}")
+                Text("$checkBoxRef")
               ],
             ),
 
